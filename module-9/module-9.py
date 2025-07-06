@@ -19,6 +19,7 @@ def main():
         apiString = "https://www.dnd5eapi.co/api/2014/classes/" + myClass
         chosenClass = requests.get(apiString)
         print(chosenClass.status_code)
+        print(chosenClass.json())
         jprint(chosenClass.json())
     except:
         print("Invalid argument, Please Try again.")
